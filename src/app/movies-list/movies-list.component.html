@@ -8,7 +8,12 @@
           <img src="{{movie.imgUrl}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{movie.title}}</h5>
-            <p class="card-text">{{movie.description}}</p>
+            <p class="card-text">{{movie.description}} 
+              
+             - {{movie.language}}
+             - {{movie.price | currency:"INR"}}
+            </p>
+       
             <a routerLink="{{movie.title}}" class="btn btn-primary">View</a>
     </div>
 </div> 
