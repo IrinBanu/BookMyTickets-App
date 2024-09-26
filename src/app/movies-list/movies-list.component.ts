@@ -52,5 +52,12 @@ this.movies=this.movies.filter(obj=>obj.language.includes(this.language));
   console.log('movietype called');
   this.movies=this.movies.filter(obj=>obj.description.includes(this.movieType));
  }
+
+if(this.minPrice && this.maxPrice){
+  console.log('mini to max price');
+  console.table(this.movies);
+  this.movies=this.movies.filter(obj=>obj.price>=this.minPrice && obj.price<=this.maxPrice);
+}
+
 }
 }
