@@ -35,6 +35,22 @@ console.log('MoviesListComponent');
    console.log('movies', this.movies); 
  };
 
- 
+reset(){
+  this.movies=this.moviesservice.getAllMovies();
+}
 
+ applyFilter(){
+  alert("language" + this.language);
+ alert("movieType" + this.movieType);
+
+ if(this.language) {
+this.movies=this.movies.filter(obj=>obj.language.includes(this.language));
+  
+ }
+
+ if(this.movieType){
+  console.log('movietype called');
+  this.movies=this.movies.filter(obj=>obj.description.includes(this.movieType));
+ }
+}
 }

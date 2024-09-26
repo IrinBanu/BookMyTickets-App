@@ -1,6 +1,42 @@
+<div class="container-fluid">
 <br/>
+
 <h2 style="color: red; ">Movies</h2> <br/>
 
+<div class="row">
+    Filter:
+    <br />
+
+<form (ngSubmit)="applyFilter()">
+
+      <div>
+        <label for="language">Language:</label>
+        <select name="language" [(ngModel)]="language">
+          <option>Tamil</option>
+          <option>English</option>
+          <option>Hindi</option>
+          <option>Telugu</option>
+          <option >Kannada</option>
+        </select>
+</div>
+
+<div>
+<label for="movieType">Description:</label>  
+<select name="movieType"[(ngModel)]="movieType" >
+  <option >Action</option>
+  <option >Thriller</option>
+  <option >Family</option>
+  <option >Sci-Fi</option>
+  <option >Sports</option>
+</select>
+</div>
+
+  <button type="submit" class="btn btn-info">Submit</button>&nbsp;
+  <button type="reset" class="btn btn-danger"(click)="reset()">Reset</button>
+      
+
+
+<div class="col-9">
 <div class="row">
     @for(movie of movies; track movie){
 
@@ -12,9 +48,11 @@
               
              - {{movie.language}}
              - {{movie.price | currency:"INR"}}
-            </p>
+            </p> 
        
             <a routerLink="{{movie.title}}" class="btn btn-primary">View</a>
     </div>
 </div> 
     }
+  </div>
+  </div>

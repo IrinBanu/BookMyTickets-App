@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component} from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MoviesListComponent } from '../movies-list/movies-list.component';
 
 @Component({
@@ -9,8 +9,4 @@ import { MoviesListComponent } from '../movies-list/movies-list.component';
   templateUrl: './home.component.html',
   styles: ``
 })
-export class HomeComponent {
-
-
-
-}
+export class HomeComponent{}
