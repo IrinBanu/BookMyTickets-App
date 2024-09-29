@@ -13,17 +13,33 @@ export class RegisterComponent {
 
   name!:string;
   email!:string;
-  mobile!:number;
   password!:string;
+  mobile!:number;
 
   constructor(){
 
     console.log('RegisterComponent constructor called');
   }
     onSubmit(){
-      console.log('Registered successfully');
-      console.log('Name:', this.name, + "email:",this.email, + "password:", this.password);
+      console.log('Form Submitted');
+      console.log('Name:', this.name, + "email:",this.email, + "password:", this.password, + "mobile:",this.mobile);
+ 
+      const userObj={
+      name:this.name,
+      email:this.email,
+      mobile:this.mobile,
+      password:this.password
+    };
+  console.log('userObj:',userObj);
+
+  const users=[];
+  users.push(userObj);
+  localStorage.setItem("USERS", JSON.stringify(users));
+
+  alert('Registered successfully!!!');
+
+  window.location.href='/login'
 
     
-}
+    }
 }
