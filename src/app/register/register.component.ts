@@ -11,35 +11,35 @@ import { FormsModule } from '@angular/forms';
 })
 export class RegisterComponent {
 
-  name!:string;
-  email!:string;
-  password!:string;
-  mobile!:number;
+  name!: string;
+  email!: string;
+  password!: string;
 
-  constructor(){
+  constructor() {
 
     console.log('RegisterComponent constructor called');
   }
-    onSubmit(){
-      console.log('Form Submitted');
-      console.log('Name:', this.name, + "email:",this.email, + "password:", this.password, + "mobile:",this.mobile);
- 
-      const userObj={
-      name:this.name,
-      email:this.email,
-      mobile:this.mobile,
-      password:this.password
-    };
-  console.log('userObj:',userObj);
+  onSubmit() {
+    console.log('Form Submitted');
+    console.log('name:', this.name + "email:", this.email + "password:", this.password);
 
-  const users=[];
-  users.push(userObj);
-  localStorage.setItem("USERS", JSON.stringify(users));
+    const userObj = {
+      name: this.name,
+      email: this.email,
+      password: this.password,
 
-  alert('Registered successfully!!!');
-
-  window.location.href='/login'
-
-    
     }
+
+    console.log('UserObj:', userObj);
+
+    const users = [];
+    users.push(userObj);
+    localStorage.setItem("Users", JSON.stringify(users));
+
+    alert('Registered successfully!!!');
+
+    window.location.href = '/login'
+
+
+  }
 }

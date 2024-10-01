@@ -1,0 +1,35 @@
+<h4>My Cart</h4>
+
+<table class="table table-borderd">
+    <thead>
+        <tr>
+            <th>Movie Poster</th>
+            <th>Movie Title</th>
+            <th>Ticket Price</th>
+            <th>Ticket Count</th>
+           <th>Show Time and Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (cartItems) {
+        @for(item of cartItems;track item;let i=$index){
+        <tr>
+        <td><img src="{{item.imgUrl}}" width="200px" height="200px" /></td>
+            <td>{{item.title}}</td>
+            <td>{{item.price | currency:'INR'}}</td>
+            <td><input type="number" value="{{item.numberoftickets}}"></td>
+            <td><input type="date" name="" id=""></td>
+            <td>
+                <button class="btn btn-info">Confirm Booking</button>
+                &nbsp;
+                <button class="btn btn-danger" (click)="removeItem(i)">Delete</button>
+            </td>
+        </tr>
+        }
+        }
+    </tbody>
+</table>
+
+<button class="btn btn-danger" (click)="clearCart()">Empty Cart</button>

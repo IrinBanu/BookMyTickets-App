@@ -24,19 +24,32 @@ onSubmit(){
   console.log('form submitted');
   console.log('Email:', this.email, 'Password:',this.password);
 
-if (this.email=="maryamirin2022@gmail.com" && this.password=="password") {
-
+if (this.email=="maryamirin2022@gmail.com" && this.password=="password"){
   alert("loggedin successfully");
-  localStorage.setItem("Logged_In_User", "true");
-  localStorage.setItem("Email:", this.email);
+      localStorage.setItem("Logged_In_User", "true");
+      localStorage.setItem("Email:", this.email);
+    
+      window.location.href="/movies";
 
-  window.location.href="/movies";
-}
-
-
-else{
-  alert("Invalid Login Credentials");
+   
+   const usersStr=localStorage.getItem('Users');// return in string
+   
+   let users=[];
+   if (usersStr){
+     users=JSON.parse(usersStr);
+    }else{
+      users=[];
+    }
+    
+    //Using find check the input email/password matches
+    
+    // const userExists=users.find((obj:any)=>obj.email==this.email && obj.password==this.password);
+    // if (userExists != null){
+    
+    }else{
+alert("Invalid Login Credentials");
 }  
 
 }
 }
+
