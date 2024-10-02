@@ -5,6 +5,7 @@ import { ViewMovieComponent } from './view-movie/view-movie.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
 
 export const routes: Routes = [
     {path:'home', component:HomeComponent},
@@ -13,5 +14,6 @@ export const routes: Routes = [
     {path:'login', component:LoginComponent},
     {path:'register', component:RegisterComponent},
     {path:'cart', component:CartComponent},
+    {path:'payment', component:PaymentComponent},
     {path:'',redirectTo:'/home', pathMatch:'full'}
 ];

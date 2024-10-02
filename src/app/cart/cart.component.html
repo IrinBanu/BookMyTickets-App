@@ -1,6 +1,6 @@
 <h4>My Cart</h4>
 
-<table class="table table-borderd">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>Movie Poster</th>
@@ -22,7 +22,7 @@
             <td><input type="number" value="{{item.numberoftickets}}"></td>
             <td><input type="date" name="" id=""></td>
             <td>
-                <button class="btn btn-info">Confirm Booking</button>
+                <button class="btn btn-info" routerLink="/payment">Confirm Booking</button>
                 &nbsp;
                 <button class="btn btn-danger" (click)="removeItem(i)">Delete</button>
             </td>
