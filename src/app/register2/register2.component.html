@@ -1,0 +1,34 @@
+<p>Register- Using Reactive Forms Module</p>
+
+<div class="container-fluid">
+    <h3>Register Here!!!</h3>
+    <form (ngSubmit)="onSubmit()" [formGroup]="regForm">
+    
+    <div>
+    <label for="name">Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="name" id="name" placeholder="Enter Your Name" formControlName="name" autofocus>
+    </div><br/>
+    
+    <div>
+    <label for="email">Email ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="email" name="email" id="email" placeholder="Enter Your Email" formControlName="email">
+    </div><br/>
+    
+    <div>
+    <label for="mobile">Mobile Number</label>
+    <input type="number" name="mobile" id="mobile" placeholder="Mobile Number"formControlName="mobileNumber">
+    </div><br/>
+    
+    <div>
+    <label for="password">Password</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="password" name="password" id="password" placeholder="Password" formControlName="password">
+    </div><br/>
+        
+    <div>
+    <button type="submit" [disabled]="regForm.invalid" class="btn btn-success">Submit</button>
+    {{regForm.invalid}}-{{regForm.valid}}
+    </div>
+    </form>
+    
+    
+    </div>
