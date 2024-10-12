@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent {
 email!:string;
 password!:string;
 
-constructor(){
+constructor(private readonly toastr:ToastrService){
   console.log('Login component called');
 }
 
@@ -26,6 +27,7 @@ onSubmit(){
 
 if (this.email=="maryamirin2022@gmail.com" && this.password=="password"){
   alert("loggedin successfully");
+  this.toastr.success("loggedin successfully");
       localStorage.setItem("Logged_In_User", "true");
       localStorage.setItem("Email:", this.email);
     

@@ -8,6 +8,22 @@ export class MoviesService  {
   constructor() { }
   
     private movies=[
+      {id:48,
+        title:"Vettaiyan",
+        imgUrl:"assets/images/vettaiyan.jpg",
+        description:"Action/Drama",
+        language:"Tamil, Hindi",
+        price:"150"
+        },
+
+      {id:49,
+        title:"Black",
+        imgUrl:"assets/images/black.jpg",
+        description:"Horror/ Thriller",
+        language:"Tamil",
+        price:"120"
+        },
+
       {id:50,
       title:"Hitler",
       imgUrl:"/assets/images/hitler.jpg",

@@ -1,34 +1,38 @@
 <br/>
-<h5>Card Details</h5><br/><br/>
+<div class="card-payment">
 
+    <h5><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+    </svg> &nbsp;<b><u>Card Details</u></b></h5><br/><br/>
+
+    <div class="card-body">
 <div>
-<label for="Name">Name</label><br/>
-<input type="text" name="name" id="name" placeholder="Account Holder Name" required autofocus><br/>
+<label for="Name" class="text-primary-emphasis"><b>Name</b></label><br/>
+<input type="text" name="name" id="name" placeholder="Name On Card" required autofocus><br/>
 </div><br/>
 
-<!--<div  class="card w-50">
-<label for="Bank">Bank</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<select>
-<option >City Union Bank</option>
-<option >Axis Bank</option>
-<option >Union Bank</option>
-<option >State Bank Of India</option>
-<option >Indian Bank</option>
-</select>
-</div><br/>-->
-
 <div>
-<label for="cardnum">Card Number</label><br>
+<label for="cardnum" class="text-primary-emphasis"><b>Card Number</b></label><br>
 <input type="number" name="cardnum" id="cardnum" placeholder="1234 4567 7890 0321">
 </div><br/>
 
-<div>
-<label for="exp">Expiry</label><br>
+<div class="row">
+<div class="col-5 ">
+<label for="exp" class="text-primary-emphasis"><b>Expiry</b></label><br>
 <input type="date" name="exp" id="exp"><br>
 </div>
 
-<div>
-<label for="cvv">CVV</label><br>
-<input type="number" name="cvv" id="cvv">
+<div class="col-5">
+<label for="cvv" class="text-primary-emphasis"><b>CVV</b></label><br>
+<input type="number" min="1" name="cvv" id="cvv" style="width: 55px;">
+</div>
+</div>
+</div>
+<br/><br/>
+
+<div style="text-align: center;">
+    <button class="btn btn-success">Confirm Payment</button>
 </div>
 

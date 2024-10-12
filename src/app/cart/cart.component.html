@@ -19,8 +19,8 @@
         <td><img src="{{item.imgUrl}}" width="200px" height="200px" /></td>
             <td>{{item.title}}</td>
             <td>{{item.price | currency:'INR'}}</td>
-            <td><input type="number" value="{{item.numberoftickets}}"></td>
-            <td><input type="date" name="" id=""></td>
+            <td><input type="number" min="1" value="{{item.numberoftickets}}"></td>
+            <td><input type="date" name="date" id="date"></td>
             <td>
                 <button class="btn btn-info" routerLink="/payment">Confirm Booking</button>
                 &nbsp;

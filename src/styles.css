@@ -1,15 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-body{
-    background-color: lightsalmon;
-}
+/*body{ background-color: lightsalmon;}*/
+
 .movie-card {
     padding: 10px;
 }
 
 .payment{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+   /* font-family: 'Courier New', Courier, monospace;*/
 }
 
 .payment_form{
@@ -17,11 +16,39 @@ body{
     width:40%;
     padding: 35px;
     border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
+    /*font-family: 'Courier New', Courier, monospace;*/
     margin-left: 10%;
     margin-top: 3px;
+    box-shadow: 4px 3px 3px lightgray;
 }
 
 .payment_form:hover{
 background-color: beige;
+box-shadow: 5px 5px 5px;
+}
+
+.card-payment
+{
+    margin-left: 50px;
+    margin-top: 10px;
+    border: 1px solid black;
+    width:600px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px lightgray;
+}
+
+.card-payment:hover{
+  box-shadow: 6px 6px 6px black;
+  background-color: beige;
+
+}
+
+.card-body{
+    margin-left: 25px;
+}
+
+.netbank-hover:hover{
+    font-size: x-large;
 }
