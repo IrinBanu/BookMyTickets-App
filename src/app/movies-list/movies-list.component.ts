@@ -16,13 +16,9 @@ export class MoviesListComponent  implements OnInit{
 movies!:any[];
 
 language!:string;
-
 movieType!:string;
-
 price!:number;
-
 minPrice!:number;
-
 maxPrice!:number;
   
 

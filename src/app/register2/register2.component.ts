@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, MinLengthValidator, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, MinLengthValidator, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register2',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, FormsModule],
   templateUrl: './register2.component.html',
   styles: ``
 })
@@ -60,17 +60,21 @@ export class Register2Component implements OnInit {
     console.log('Form Submitted');
     console.log("valid", this.regForm.valid);
     console.log("value", this.regForm.value);
-
     const userObj = this.regForm.value;
     console.log('userObj:', userObj);
     
+    const users = [];
+    users.push(userObj);
+    localStorage.setItem("Users", JSON.stringify(users));
+    
       if (this.regForm.valid) {
-  
-        alert('Registered successfully!!!');
-        window.location.href = '/login'
+          //alert('Registered successfully!!!');
+          this.toastr.success("Registered Successfully");
+         window.location.href = '/login'
       } else {
-        alert('Please fill required details');
-      }
+        //alert('Please fill required details');
+        this.toastr.error('Please fill required details');
+            }
 
     //console.log('name:', this.name + "email:", this.email + "password:", this.password);
     
@@ -82,14 +86,10 @@ export class Register2Component implements OnInit {
 
     // }
 
-    // // console.log('UserObj:', userObj);
+//1. send userObj to backend REST API url => insert the user details into database
+      //axios.post(url, userObj).then (res=> ...)
 
-    // // const users = [];
-    // users.push(userObj);
-    // localStorage.setItem("Users", JSON.stringify(users));
-
-
-
-
+      //2. Temporarily storing users data in localStorage
+      
   }
 }

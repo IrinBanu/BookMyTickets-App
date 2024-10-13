@@ -15,10 +15,14 @@
     <div>
     <label for="email">Email ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="email" name="email" id="email" placeholder="Enter Your Email" formControlName="email"  class="form-control is-invalid">
-    
-    <small *ngIf="(email.dirty || email.touched) && email.errors?.['required']" class="invalid-feedback">
-        Please enter valid email ID.
+    <div *ngIf="(email.dirty ||email.touched) && email.errors">
+    <small *ngIf="email.errors?.['required']" class="invalid-feedback">
+        Email is required.
     </small>
+    <small *ngIf="email.errors?.['required']" class="invalid-feedback">
+        Email is not in valid format.
+    </small>
+</div>
     </div><br/>
     
     <div>
@@ -46,7 +50,7 @@
     </div><br/>
         
     <div>
-    <button type="submit" [disabled]="regForm.invalid" class="btn btn-success">Submit</button>
+    <button type="submit" [disabled]="!regForm.valid" class="btn btn-success">Submit</button>
     {{regForm.invalid}}-{{regForm.valid}}
     </div>
     </form>
