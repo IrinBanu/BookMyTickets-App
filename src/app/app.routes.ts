@@ -8,6 +8,7 @@ import { CartComponent } from './cart/cart.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CardsComponent } from './cards/cards.component';
 import { Register2Component } from './register2/register2.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 
 export const routes: Routes = [
     {path:'home', component:HomeComponent},
@@ -19,5 +20,6 @@ export const routes: Routes = [
     {path:'cart', component:CartComponent},
     {path:'payment', component:PaymentComponent},
     {path:'cards', component:CardsComponent},
+    {path:'edit-profile', component:ProfileEditComponent},
     {path:'',redirectTo:'/home', pathMatch:'full'}
 ];
